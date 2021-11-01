@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <h1>Анкета посетителя ресторана</h1>
+    <form action="mailto:ryus4221@gmail.com" enctype="text/plain" method="post">
+        <fieldset>
+            <legend>Контактная информация</legend>
+            <p>
+                <label for="fname">Имя</label>
+                <input type="text" name="fname" id="fname" required minlength="3" maxlength="35">
+            </p>
+            <p>
+                <label for="phone">Телефон</label>
+                <input type="tel" name="phone" id="phone" required placeholder="+38 (xxx) xxx-xx-xx" pattern="[\+]\d{2}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}">
+            </p>
+            <p>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required autofocus>
+            </p>
+            <p>
+                <label for="dov">Дата посещения</label>
+                <input type="date" name="dov" id="dov">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Персональная информация</legend>
+            <p>
+                <label for="age">Возраст</label>
+                <input type="number" name="age" id="age" min="12" max="100" step="1">
+            </p>
+            <p>
+                <label for="cuisine">Любимая кухня</label>
+                <select name="cuisine" id="cuisine" multiple>
+                    <option value="italian">Итальянская</option>
+                    <option value="turkish">Турецкая</option>
+                    <option value="ukrainian">Украинская</option>
+                    <option value="french">Французкая</option>
+                    <option value="japanese">Японская</option>
+                    <option value="russian">Русская</option>
+                </select>
+            </p>
+            <p>
+                <label for="dish">Какие блюда Вы хотели бы увидеть в меню</label>
+                <textarea name="dish" id="dish" cols="30" rows="3" placeholder="Названия блюд"></textarea>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Оценка нашего заведения</legend>
+            <p>
+                <h3>Почему Вы выбрали наше заведение?</h3>
+            </p>
+            <p>
+                <input type="radio" name="answer" id="a1" value="near">
+                <label for="a1">Недалеко от дома/работы</label>
+            </p>
+            <p>
+                <input type="radio" name="answer" id="a2" value="adv">
+                <label for="a2">Увидел рекламу</label>
+            </p>
+            <p>
+                <input type="radio" name="answer" id="a3" value="rec">
+                <label for="a3">Посоветовали</label>
+            </p>
+            <p>
+                <input type="radio" name="answer" id="a4" value="opt">
+                <label for="a4">Оптимальное соотношение цены и качества</label>
+            </p>
+            <p>
+                <h3>Вы будете рекомендовать наше заведение своим знакомым?</h3>
+            </p>
+            <p>
+                <input type="radio" name="answer1" id="yes" value="yes">
+                <label for="yes">Да</label>
+            </p>
+            <p>
+                <input type="radio" name="answer1" id="no" value="no">
+                <label for="no">Нет</label>
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Отправить">
+        </p>
+    </form>
+</body>
+
+</html>
